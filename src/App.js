@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Morning from './Components/Morning';
 
 function App() {
   return (
-    <div>Hello</div>
+    <div>
+      <Morning />
+    </div>
   );
 }
 

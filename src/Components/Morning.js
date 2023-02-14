@@ -9,12 +9,20 @@ const Morning = () => {
   const [showBreakfast, setShowBreakfast] = useState(false)
   const [showMeditation, setShowMeditation] = useState(false)
 
-  const showExercises = () => {
+  const showExerciseComponent = () => {
     setShowExercise(!showExercise)
     console.log(showExercise)
   }
   
-  
+  const showBreakfastComponent = () => {
+    setShowBreakfast(!showBreakfast)
+    console.log(showBreakfast)
+  }
+
+  const showMeditationComponent = () => {
+    setShowMeditation(!showMeditation)
+    console.log(showMeditation)
+  }
 
   return (
     <div>

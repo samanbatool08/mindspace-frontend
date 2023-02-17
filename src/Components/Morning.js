@@ -27,16 +27,20 @@ const Morning = () => {
   return (
     <div>
       <h1>Good Morning!</h1> 
-      <div onClick={showExercises}>
+      <div onClick={showExerciseComponent}>
         <h2>Movement</h2>
+        </div>
         {showExercise && <Exercises />}
+
+      <div onClick={showBreakfastComponent}>
+        <h2>Breakfast Ideas</h2>
       </div>
+      {showBreakfast && <BreakfastMeals />}
 
-      <h2>Breakfast Ideas</h2>
-      <BreakfastMeals />
-
-      <h2>Medidate</h2>
-      <Meditation />
+      <div onClick={showMeditationComponent}>
+        <h2>Medidate</h2>
+      </div>
+      {showMeditation && <Meditation />}
 
       <h4>What time do you start work?</h4>
     </div>

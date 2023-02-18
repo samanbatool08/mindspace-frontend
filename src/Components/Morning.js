@@ -11,17 +11,14 @@ const Morning = () => {
 
   const showExerciseComponent = () => {
     setShowExercise(!showExercise)
-    console.log(showExercise)
   }
   
   const showBreakfastComponent = () => {
     setShowBreakfast(!showBreakfast)
-    console.log(showBreakfast)
   }
 
   const showMeditationComponent = () => {
     setShowMeditation(!showMeditation)
-    console.log(showMeditation)
   }
 
   return (

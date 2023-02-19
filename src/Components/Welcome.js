@@ -20,7 +20,15 @@ const Welcome = () => {
       email
     }
 
-    console.log(userData)
+    fetch('http://localhost:3000/signup', {
+      // mode: 'no-cors',
+      method: 'POST', 
+      headers: { 'content-type': 'application/json', 
+                  accepts: 'application/json' },
+      body: JSON.stringify(userData)
+    })
+    .then(resp => resp.json())
+    .then(newUser => console.log(newUser))
   }
   
   return (

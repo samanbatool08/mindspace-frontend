@@ -13,11 +13,21 @@ const Welcome = () => {
     setEmail(e.target.value)
   }
 
+  const submitForm = (e) => {
+    e.preventDefault()
+    const userData = {
+      username, 
+      email
+    }
+
+    console.log(userData)
+  }
+  
   return (
     <div>
       <h1>Welcome User</h1>
 
-      <form>
+      <form onSubmit={submitForm}>
         <label>Username: </label>
         <input name="username" value={username} type="text" onChange={handleUsernameChange}></input>
 

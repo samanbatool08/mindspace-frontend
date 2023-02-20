@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import LogIn from '../LogIn';
 
 const Welcome = () => {
 
@@ -44,7 +45,7 @@ const Welcome = () => {
   return (
     <div>
       <h1>Welcome User</h1>
-
+      {/* TODO refactor form into seperate resusable component */}
       <form onSubmit={submitForm}>
         <label>Username: </label>
         <input name="username" value={username} type="text" onChange={handleUsernameChange}></input>
@@ -54,6 +55,8 @@ const Welcome = () => {
 
         <input type="submit" value="Submit"></input>
       </form>
+
+      <LogIn />
     </div>
   )
 }

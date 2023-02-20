@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Welcome = () => {
 
@@ -20,17 +21,26 @@ const Welcome = () => {
       email
     }
 
-    fetch('http://localhost:3000/signup', {
-      // mode: 'no-cors',
-      method: 'POST', 
-      headers: { 'content-type': 'application/json', 
-                  accepts: 'application/json' },
-      body: JSON.stringify(userData)
-    })
-    .then(resp => resp.json())
-    .then(newUser => console.log(newUser))
-  }
-  
+  //   fetch('http://localhost:3000/signup', {
+  //     // mode: 'no-cors',
+  //     method: 'POST', 
+  //     headers: { 'content-type': 'application/json', 
+  //                 accepts: 'application/json' },
+  //     body: JSON.stringify(userData)
+  //   })
+  //   .then(resp => resp.json())
+  //   .then(newUser => console.log(newUser))
+
+  axios.post('http://localhost:3000/signup', userData)
+  .then(function (response) {
+    console.log(response.data)
+  })
+  // TODO resetting form but look into refactor later
+  setUsername("")
+  setEmail("")
+}
+
+
   return (
     <div>
       <h1>Welcome User</h1>
